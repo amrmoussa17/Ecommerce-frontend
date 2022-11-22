@@ -1,0 +1,24 @@
+.product-info .text-box {
+  width: 50%;
+}
+@media (max-width: 991px) {
+  .product-info .text-box {
+    width: auto;
+  }
+}
+.increment-control {
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+.increment-control .inc-symbol {
+  color: hsl(26, 100%, 55%);
+  cursor: pointer;
+}
+.cart-btn {
+  background-color: hsl(26, 100%, 55%);
+  padding: 10px 40px;
+  text-align: center;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}

@@ -14,11 +14,11 @@ function ProductsList() {
     category = "women's clothing"
   }
 
-  const allProducts = useSelector((State) => State.allProducts.products)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchProducts())
   }, [])
+  const allProducts = useSelector((State) => State.allProducts)
 
   return (
     <div className="container py-4 bg-light">
