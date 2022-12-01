@@ -22,3 +22,56 @@
   border-radius: 7px;
   cursor: pointer;
 }
+.cart-btn:hover {
+  background-color: #ff7d1acf;
+}
+.product-list {
+  position: relative;
+}
+
+.main-nav {
+  position: relative;
+}
+.cart {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 52px;
+  width: 250px;
+  background-color: white;
+  height: 105px;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+  z-index: 2;
+  padding: 0 10px;
+  font-size: 14px;
+  box-shadow: 0 0 15px #dee2e6;
+}
+.cart-item-title {
+  width: 143px;
+  height: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+.cart-remove {
+  cursor: pointer;
+}
+.navbar-text {
+  position: relative;
+}
+.navbar-text .count {
+  position: absolute;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+  top: 0;
+  right: -8px;
+  font-size: 12px;
+}

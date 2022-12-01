@@ -1,9 +1,8 @@
 import axios from "axios"
-import { combineReducers } from "redux"
 
-export const FETCH_PRODUCTS = "FETCH_PRODUCTS"
-export const FETCH_PRODUCT_INFO = "FETCH_PRODUCT_INFO"
-export const REMOVE_PRODUCT_INFO = "REMOVE_PRODUCT_INFO"
+const FETCH_PRODUCTS = "FETCH_PRODUCTS"
+const FETCH_PRODUCT_INFO = "FETCH_PRODUCT_INFO"
+const REMOVE_PRODUCT_INFO = "REMOVE_PRODUCT_INFO"
 
 export const fetchProducts = () => async (dispatch) => {
   const res = await axios.get("https://fakestoreapi.com/products")
@@ -21,7 +20,7 @@ export const removeProductInfo = () => {
   }
 }
 
-const productReducer = (state = [], action) => {
+export const productReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
       return [...action.payload]
@@ -29,7 +28,7 @@ const productReducer = (state = [], action) => {
       return state
   }
 }
-const infoReducer = (state = {}, action) => {
+export const infoReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_PRODUCT_INFO:
       return { ...action.payload }
@@ -39,10 +38,3 @@ const infoReducer = (state = {}, action) => {
       return state
   }
 }
-
-const product = combineReducers({
-  allProducts: productReducer,
-  productInfo: infoReducer,
-})
-
-export default product
