@@ -4,7 +4,7 @@
 
 ## Technologies used
 
-- Reactjs, Redux, Redux thunk
+- Reactjs, Redux, Redux thunk, Bootstrap
 
 ## Live Demo
 
